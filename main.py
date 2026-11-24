@@ -18,6 +18,9 @@ SENTENCE = (
 )
 
 
+# Guards enforce the kit's rules before anything is written: the entry
+# must be a single sentence of at most 200 characters. The file is
+# only created once every check has passed.
 def main() -> None:
     assert 1 <= len(SENTENCE) <= 200, f"sentence is {len(SENTENCE)} chars"
     assert SENTENCE.count(".") == 1, "must be a single sentence"
